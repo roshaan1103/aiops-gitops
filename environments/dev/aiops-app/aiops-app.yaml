@@ -1,0 +1,18 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: aiops-app
+  namespace: argocd
+spec:
+  project: default
+  source:
+    repoURL: https://github.com/roshaan1103/aiops-gitops
+    targetRevision: HEAD
+    path: apps/aiops-app
+  destination:
+    server: https://kubernetes.default.svc
+    namespace: default
+  syncPolicy:
+    automated:
+      prune: true
+      selfHeal: true
