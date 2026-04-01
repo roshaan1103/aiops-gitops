@@ -7,6 +7,8 @@ resources:
   - grafana-ingress.yaml
   - argocd-tls.yaml
   - grafana-tls.yaml
+  - grafana-datasource.yaml
+  - grafana-dashboard.yaml
 
 patches:
   - target:
