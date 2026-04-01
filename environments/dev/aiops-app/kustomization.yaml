@@ -3,6 +3,10 @@ kind: Kustomization
 
 resources:
   - ../../../apps/aiops-app
+  - argocd-ingress.yaml
+  - grafana-ingress.yaml
+  - argocd-tls.yaml
+  - grafana-tls.yaml
 
 patches:
   - target:
