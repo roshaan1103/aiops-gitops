@@ -8,7 +8,8 @@ resources:
   - argocd-tls.yaml
   - grafana-tls.yaml
   - grafana-datasource.yaml
-  - grafana-dashboard.yaml
+  - grafana-dashboard-provider.yaml
+  - grafana-dashboard-config.yaml
 
 patches:
   - target:
