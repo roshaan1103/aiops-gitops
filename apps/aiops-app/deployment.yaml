@@ -16,6 +16,6 @@ spec:
     spec:
       containers:
       - name: aiops-app
-        image: ghcr.io/roshaan1103/k8sagro-helm-app:335a4c382b47e8df9a07afa4ae8731bc30ec9de7
+        image: ghcr.io/roshaan1103/k8sagro-helm-app:cd8a0c789c942d73d4e2ee7770b7e5780476ba82
         ports:
         - containerPort: 8000
