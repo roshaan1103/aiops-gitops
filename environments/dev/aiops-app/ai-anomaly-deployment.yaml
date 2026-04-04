@@ -15,6 +15,6 @@ spec:
     spec:
       containers:
       - name: ai-anomaly-service
-        image: ghcr.io/roshaan1103/ai-anomaly-service:latest
+        image: ghcr.io/roshaan1103/ai-anomaly-service:${GITHUB_SHA}
         ports:
         - containerPort: 8000
