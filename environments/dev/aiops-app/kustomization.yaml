@@ -13,7 +13,7 @@ resources:
   - ai-anomaly-deployment.yaml
   - ai-anomaly-servicemonitor.yaml
   - ai-anomaly-service.yaml
-  - aiops-app.yaml
+
 
 
 patches:
