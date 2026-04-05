@@ -1,22 +1,11 @@
-apiVersion: apps/v1
-kind: Deployment
+apiVersion: v1
+kind: Service
 metadata:
   name: ai-anomaly-service
   namespace: monitoring
 spec:
-  replicas: 1
   selector:
-    matchLabels:
-      app: ai-anomaly-service
-  template:
-    metadata:
-      labels:
-        app: ai-anomaly-service
-    spec:
-      containers:
-      - name: ai-anomaly-service
-        image: ghcr.io/roshaan1103/ai-anomaly-service:latest
-        ports:
-        - name: http
-          port: 8000
-          targetport: 8000
+    app: ai-anomaly-service
+  ports:
+  - port: 8000
+    targetPort: 8000
