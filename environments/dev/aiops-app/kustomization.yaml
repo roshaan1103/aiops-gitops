@@ -3,17 +3,24 @@ kind: Kustomization
 
 resources:
   - ../../../apps/aiops-app
-  - argocd-ingress.yaml
-  - grafana-ingress.yaml
-  - argocd-tls.yaml
-  - grafana-tls.yaml
-  - grafana-datasource.yaml
-  - grafana-dashboard-provider.yaml
-  - grafana-dashboard-config.yaml
-  - ai-anomaly-deployment.yaml
-  - ai-anomaly-servicemonitor.yaml
-  - ai-anomaly-service.yaml
 
+  - aiops-app.yaml
+
+  # AI Anomaly Service
+  - ai-anomaly-deployment.yaml
+  - ai-anomaly-service.yaml
+  - ai-anomaly-servicemonitor.yaml
+
+  # Observability
+  - grafana-dashboard-config.yaml
+  - grafana-dashboard-provider.yaml
+  - grafana-datasource.yaml
+
+  # Ingress
+  - grafana-ingress.yaml
+  - grafana-tls.yaml
+  - argocd-ingress.yaml
+  - argocd-tls.yaml
 
 
 patches:
