@@ -11,4 +11,5 @@ spec:
       app: ai-anomaly-service
   endpoints:
   - port: http
+    path: /metrics
     interval: 15s
