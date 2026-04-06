@@ -1,0 +1,19 @@
+apiVersion: monitoring.coreos.com/v1
+kind: PrometheusRule
+metadata:
+  name: ai-anomaly-alert
+  namespace: monitoring
+  labels:
+    release: prometheus
+spec:
+  groups:
+  - name: aiops-anomaly
+    rules:
+    - alert: AIAnomalyDetected
+      expr: aiops_anomaly_detected == 1
+      for: 30s
+      labels:
+        severity: critical
+      annotations:
+        summary: "AI detected anomaly in system"
+        description: "Anomaly detected by AI model in Kubernetes cluster"
