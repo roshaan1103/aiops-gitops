@@ -20,12 +20,29 @@ data:
               "legendFormat": "{{pod}}"
             }
           ],
-          "gridPos": {
-            "h": 8,
-            "w": 12,
-            "x": 0,
-            "y": 0
-          }
+          "gridPos": { "h": 8, "w": 12, "x": 0, "y": 0 }
+        },
+        {   
+          "type": "graph",
+          "title": "AI Anomaly Score",
+          "targets": [
+            {
+              "expr": "aiops_anomaly_score",
+              "legendFormat": "score"
+            }
+          ],
+          "gridPos": { "h": 8, "w": 12, "x": 12, "y": 0 }
+        },
+        {
+          "type": "stat",
+          "title": "Anomaly Detected",
+          "targets": [
+            {
+              "expr": "aiops_anomaly_detected",
+              "legendFormat": "detected"
+            }
+          ],
+          "gridPos": { "h": 6, "w": 6, "x": 0, "y": 8 }
         }
       ],
       "schemaVersion": 16,
