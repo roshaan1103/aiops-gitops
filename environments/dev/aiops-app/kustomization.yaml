@@ -10,6 +10,7 @@ resources:
   - ai-anomaly-service.yaml
   - ai-anomaly-servicemonitor.yaml
   - ai-anomaly-alert.yaml
+  - ai-alertmanager-config.yaml
 
   # Observability
   - grafana-dashboard-config.yaml
