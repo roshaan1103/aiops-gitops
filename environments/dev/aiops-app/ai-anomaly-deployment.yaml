@@ -16,6 +16,6 @@ spec:
       serviceAccountName: ai-anomaly-sa
       containers:
       - name: ai-anomaly-service
-        image: ghcr.io/roshaan1103/ai-anomaly-service:2da7395002065eee8a9a1ac59e928ec5041c1425
+        image: ghcr.io/roshaan1103/ai-anomaly-service:2b6487ea3cff92869376ef483c6383fc77d7d23c
         ports:
         - containerPort: 8000
