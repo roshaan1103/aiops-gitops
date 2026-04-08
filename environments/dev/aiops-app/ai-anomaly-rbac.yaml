@@ -1,0 +1,29 @@
+apiVersion: v1
+kind: ServiceAccount
+metadata:
+  name: ai-anomaly-sa
+  namespace: monitoring
+---
+apiVersion: rbac.authorization.k8s.io/v1
+kind: Role
+metadata:
+  name: ai-anomaly-role
+  namespace: default
+rules:
+- apiGroups: ["apps"]
+  resources: ["deployments"]
+  verbs: ["get", "patch", "list"]
+---
+apiVersion: rbac.authorization.k8s.io/v1
+kind: RoleBinding
+metadata:
+  name: ai-anomaly-binding
+  namespace: default
+subjects:
+- kind: ServiceAccount
+  name: ai-anomaly-sa
+  namespace: monitoring
+roleRef:
+  kind: Role
+  name: ai-anomaly-role
+  apiGroup: rbac.authorization.k8s.io
